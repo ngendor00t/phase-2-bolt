@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function Botprofile({ bots }) {
+export default function Botprofile({ bots , addToMyBots }) {
   return (
     <>
-      <h1>BotBattle</h1>
       <ul id="rows">
     
         {bots.map((bot) => (
@@ -15,6 +14,7 @@ export default function Botprofile({ bots }) {
             <p>armor:{bot.armor}</p>
             <p>bot_class:{bot.class}</p>
             <p>catchphrase:{bot.catchphrase}</p>
+            <button onClick={() => addToMyBots(bot)}>Add to my Bots</button>
           </li>
         ))}
       </ul>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Botprofile from './components/Botprofile';
-
+import Mybots from './components/Mybots';
 function App() {
   const [bots, setBots] = useState([]);
+  const [ myBots, setMybots]=useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/bots')
@@ -16,11 +17,23 @@ function App() {
       });
   }, []);
 
+ const addToMyBots = ((bot)=>{
+  if(!myBots.some(myBot => myBot.id === bot.id)){
+    setMybots([...myBots, bot])
+
+
+  }
+ } )
+
+
+
   return (
     <div>
       <h1>BotBattle App</h1>
-      {bots.length > 0 ? (
-        <Botprofile bots={bots} />
+      <myBots myBots={myBots} addToMyBots={addToMyBots} />
+       
+       {bots.length > 0 ? (
+        <Botprofile bots={bots}  addToMyBots={addToMyBots}/>
       ) : (
         <p></p>
       )}
