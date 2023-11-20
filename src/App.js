@@ -6,7 +6,7 @@ function App() {
   const [ myBots, setMybots]=useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots')
+    fetch("https://my-json-server.typicode.com/ngendor00t/phase-2-bolt/bots")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
