@@ -12,7 +12,6 @@ function Mybots({ myBots, addToMyBots }) {
             <p>Armor: {bot.armor}</p>
             <p>Damage: {bot.damage}</p>
             <p>Class: {bot.bot_class}</p>
-            <p>Catchphrase: {bot.catchphrase}</p>
             <button onClick={() => addToMyBots(bot)}>Add to My Bots</button>
           </li>
         ))}

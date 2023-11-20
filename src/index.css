@@ -14,10 +14,28 @@ code {
  #rows{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color:blanchedalmond;
+  background-color:plum;
+  
+
 
  } 
  h1 {
   text-align: center;
+  background-color:palevioletred;
+
+  
+
+ }
+ header{
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: dotted;
+  tab-size: 0cqi;
+  size: 0dvb;
+  
+  
+  
+  
 
  }
